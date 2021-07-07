@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-g",
+				"${file}",
+				"-g",
+				"glm.c",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-I\"C:\\freeglut\\include\"",
+                "-L\"c:\\freeglut\\lib\\x64\"",
+				"-lfreeglut",
+				"-lwinmm",
+				"-lopengl32",
+				"-lglu32"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
